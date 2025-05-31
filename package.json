@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.2.0",
     "@neondatabase/serverless": "^1.0.0",
     "@next/font": "^14.2.15",
+    "@react-spring/web": "^9.7.3",
     "@tailwindcss/postcss": "^4.1.8",
     "drizzle-kit": "^0.31.1",
     "drizzle-orm": "^0.44.1",
@@ -19,6 +20,7 @@
     "pg": "^8.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
     "zod": "^3.25.42"
   },
   "devDependencies": {
