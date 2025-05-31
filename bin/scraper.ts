@@ -81,10 +81,10 @@ async function downloadPage(
 
 async function continueDownload() {
   const scraperState = await getState()
-  console.log("Loaded saved scraper state", scraperState)
+  console.log("Loaded saved scraper state", scraperState.latestPage)
 
   const latestPage = scraperState.latestPage
-  for (let i = latestPage + 1; i < 20; i++) {
+  for (let i = latestPage + 1; i < 50; i++) {
     console.log("Page", i)
     const { profiles, isLastPage } = await downloadPage(i)
 
@@ -110,4 +110,4 @@ async function continueDownload() {
   // console.log(`Results saved to ${outputPath}`)
 }
 
-// void continueDownload()
+void continueDownload()
