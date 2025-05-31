@@ -7,6 +7,30 @@ const API_HOST = "https://api.crustdata.com"
 //
 //
 
+const EmployerStruct = z.object({
+  title: z.string(),
+  company_name: z.string(),
+  company_linkedin_id: z.string().nullable(),
+  company_logo_url: z.string().nullable(),
+  start_date: z.string().nullable(),
+  end_date: z.string().nullable(),
+  position_id: z.number(),
+  description: z.string().nullable(),
+  location: z.string().nullable(),
+  rich_media: z.array(z.unknown()),
+})
+
+const EducationStruct = z.object({
+  degree_name: z.string().nullable(),
+  institute_name: z.string(),
+  field_of_study: z.string().nullable(),
+  start_date: z.string().nullable(),
+  end_date: z.string().nullable(),
+  institute_linkedin_id: z.string().nullable(),
+  institute_linkedin_url: z.string().nullable(),
+  institute_logo_url: z.string().nullable(),
+})
+
 const ProfileStruct = z.object({
   name: z.string(),
   location: z.string(),
@@ -16,11 +40,22 @@ const ProfileStruct = z.object({
   default_position_company_linkedin_id: z.string().nullable(),
   default_position_is_decision_maker: z.boolean(),
   flagship_profile_url: z.string(),
-  profile_picture_url: z.string(),
+  profile_picture_url: z.string().nullable(),
   headline: z.string(),
-  summary: z.string(),
+  summary: z.string().nullable(),
   num_of_connections: z.number(),
   related_colleague_company_id: z.number().nullable(),
+  skills: z.array(z.string()),
+  employer: z.array(EmployerStruct),
+  education_background: z.array(EducationStruct),
+  emails: z.array(z.string()),
+  websites: z.array(z.string()),
+  twitter_handle: z.string().nullable(),
+  languages: z.array(z.string()),
+  pronoun: z.string().nullable(),
+  query_person_linkedin_urn: z.string(),
+  linkedin_slug_or_urns: z.array(z.string()),
+  current_title: z.string(),
 })
 
 export type Person = z.infer<typeof ProfileStruct>
