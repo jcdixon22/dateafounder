@@ -11,6 +11,8 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@neondatabase/serverless": "^1.0.0",
+    "@next/font": "^14.2.15",
+    "@tailwindcss/postcss": "^4.1.8",
     "drizzle-orm": "^0.44.1",
     "next": "^15.3.3",
     "pg": "^8.16.0",
