@@ -1,0 +1,71 @@
+// 14eb60a093856a5d09a14d9939fd0ab1f4d0fb0c
+
+@api_key = 14eb60a093856a5d09a14d9939fd0ab1f4d0fb0c
+
+## Get Felipe's profile based on his URL
+
+GET https://api.crustdata.com/screener/person/enrich/basic_profile?linkedin_profile_url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Ffelipearp%2F
+Authorization: Token {{api_key}}
+Accept: application/json
+
+###
+
+POST https://api.crustdata.com/screener/person/search
+Authorization: Token {{api_key}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "filters": [
+    {
+      "filter_type": "CURRENT_TITLE",
+      "type": "in",
+      "value": [
+        "Founder",
+        "Co-Founder"
+      ]
+    },
+    {
+      "filter_type": "REGION",
+      "type": "in",
+      "value": [
+        "San Francisco Bay Area",
+        "San Francisco, California, United States",
+        "San Francisco County, California, United States"
+      ]
+    }
+  ],
+  "page": 1
+}
+
+
+
+### Get fiber.dev information
+
+GET https://api.crustdata.com/screener/company?company_domain=fiber.dev
+Authorization: Token {{api_key}}
+Accept: application/json
+
+####
+
+POST https://api.crustdata.com/screener/screen/
+Authorization: Token {{api_key}}
+Content-Type: application/json
+
+{
+  "filters": {},
+  "offset": 1
+}
+
+
+### All employees
+
+GET https://api.crustdata.com/screener/company/people?company_linkedin_id=74372366&s3_username=faragaop@gmail.com
+Authorization: Token {{api_key}}
+Accept: application/json
+
+###
+
+
+
+
