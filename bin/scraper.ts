@@ -21,7 +21,7 @@ const TITLES = ["Founder", "Co-Founder"]
 //
 //
 
-const FILEPATH = "scraping-state.json"
+export const FILEPATH = "bin/scraping-state.json"
 
 const StateStruct = z.object({
   latestPage: z.number(),
@@ -110,4 +110,4 @@ async function continueDownload() {
   // console.log(`Results saved to ${outputPath}`)
 }
 
-void continueDownload()
+// void continueDownload()

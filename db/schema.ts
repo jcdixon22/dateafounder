@@ -15,14 +15,6 @@ export const Profiles = pgTable("profiles", {
   email: text("email").notNull().unique(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
-  pushToken: text("push_token"),
-  lastSeenAt: timestamp("last_seen_at", { withTimezone: true }),
-  googleAccessToken: text("google_access_token"),
-  googleRefreshToken: text("google_refresh_token"),
-  clerkUserId: text("clerk_user_id"),
-  googleTokenExpiry: timestamp("google_token_expiry"),
-  notificationsEnabled: boolean("notifications_enabled").notNull(),
-  contextWindowSize: integer("context_window_size"),
 
   // LinkedIn profile data
   location: text("location"),
